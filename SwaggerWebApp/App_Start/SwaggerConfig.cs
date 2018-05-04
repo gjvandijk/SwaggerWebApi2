@@ -2,6 +2,7 @@ using System.Web.Http;
 using WebActivatorEx;
 using SwaggerWebApp;
 using Swashbuckle.Application;
+using libTools; // required to use MultipleOperationsWithSameVerbFilter
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
@@ -166,6 +167,18 @@ namespace SwaggerWebApp
                         // custom strategy to pick a winner or merge the descriptions for the purposes of the Swagger docs 
                         //
                         //c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+
+                        // Support for operation overload
+                        // This lack of support for operation overload is a big flaw, since even the demo web API application, 
+                        // as you may be noticing, uses operation overloads, it has two GET actions, with and without a parameter.
+                        // 
+                        // There are two possible solutions:
+                        // 
+                        // 1) Change the actions name to avoid an overload
+                        // 2) Implement an operation filter that will intercept the JSON file creation and avoid the overload 
+                        //    inside the JSON file.
+                        c.OperationFilter<MultipleOperationsWithSameVerbFilter>();
+
                     })
                 .EnableSwaggerUi(c =>
                     {
