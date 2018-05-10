@@ -4,29 +4,41 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using SwaggerWebApp.Models;
 
 namespace SwaggerWebApp.Controllers
 {
+    /// <summary>
+    /// Controller for manipulating a string array 
+    /// </summary>
     public class ValuesController : ApiController
     {
-        private string[] lista
+        private List<ValueObj> lista
         {
             get
             {
                 if (System.Web.HttpContext.Current.Application["lista"] == null)
                 {
                     System.Web.HttpContext.Current.Application["lista"] =
-                    new string[] {"value1", "value2"};
+                    new List<ValueObj>
+                    {
+                        new ValueObj("value1"),
+                        new ValueObj("value2"),
+                        new ValueObj("value3"),
+                        new ValueObj("value4"),
+                        new ValueObj("value5"),
+                    };
                 }
                 return
-                    (string[])System.Web.HttpContext.Current.Application["lista"];
+                    (List<ValueObj>)System.Web.HttpContext.Current.Application["lista"];
             }
         }
+
         /// <summary>
         /// Retrieves the list of values
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<string> Get()
+        public IEnumerable<ValueObj> Get()
         {
             return lista;
         }
@@ -35,7 +47,7 @@ namespace SwaggerWebApp.Controllers
         /// </summary>
         /// <param name="id">The id of the item to be retrieved</param>
         /// <returns></returns>
-        public string Get(int id)
+        public ValueObj Get(int id)
         {
             return lista[id];
         }
@@ -43,16 +55,25 @@ namespace SwaggerWebApp.Controllers
         /// Insert a single value in the list
         /// </summary>
         /// <param name="value">New value to be inserted</param>
-        public void Post([FromBody]string value)
+        public void Post([FromBody] ValueObj value)
         {
+            if (value == null)
+            {
+                value = new ValueObj("AddValue");
+            }
+
+            lista.Add(value);
+
         }
         /// <summary>
         /// Change a single value in the list
         /// </summary>
         /// <param name="id">The id of the value to be changed</param>
         /// <param name="value">The new value</param>
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]ValueObj value)
         {
+            if (value == null)
+                value = new ValueObj("PutValue");
             lista[id] = value;
         }
         /// <summary>
@@ -61,6 +82,7 @@ namespace SwaggerWebApp.Controllers
         /// <param name="id">id of the item to be deleted</param>
         public void Delete(int id)
         {
+            lista.RemoveAt(id);
         }
     }
 }

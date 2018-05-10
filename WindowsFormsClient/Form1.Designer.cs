@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsWebApiClient
+﻿namespace WindowsFormsClient
 {
     partial class Form1
     {
@@ -28,34 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmdAllValues = new System.Windows.Forms.Button();
             this.cmdValue = new System.Windows.Forms.Button();
             this.cmdUpdate = new System.Windows.Forms.Button();
+            this.cmdAllValues = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // cmdAllValues
-            // 
-            this.cmdAllValues.Location = new System.Drawing.Point(88, 69);
-            this.cmdAllValues.Name = "cmdAllValues";
-            this.cmdAllValues.Size = new System.Drawing.Size(75, 23);
-            this.cmdAllValues.TabIndex = 0;
-            this.cmdAllValues.Text = "All Values";
-            this.cmdAllValues.UseVisualStyleBackColor = true;
-            this.cmdAllValues.Click += new System.EventHandler(this.cmdAllValues_Click);
             // 
             // cmdValue
             // 
-            this.cmdValue.Location = new System.Drawing.Point(88, 134);
+            this.cmdValue.Location = new System.Drawing.Point(96, 151);
             this.cmdValue.Name = "cmdValue";
             this.cmdValue.Size = new System.Drawing.Size(75, 23);
             this.cmdValue.TabIndex = 1;
-            this.cmdValue.Text = "Single value";
+            this.cmdValue.Text = "Single Value";
             this.cmdValue.UseVisualStyleBackColor = true;
             this.cmdValue.Click += new System.EventHandler(this.cmdValue_Click);
             // 
             // cmdUpdate
             // 
-            this.cmdUpdate.Location = new System.Drawing.Point(88, 201);
+            this.cmdUpdate.Location = new System.Drawing.Point(93, 235);
             this.cmdUpdate.Name = "cmdUpdate";
             this.cmdUpdate.Size = new System.Drawing.Size(75, 23);
             this.cmdUpdate.TabIndex = 2;
@@ -63,14 +53,24 @@
             this.cmdUpdate.UseVisualStyleBackColor = true;
             this.cmdUpdate.Click += new System.EventHandler(this.cmdUpdate_Click);
             // 
+            // cmdAllValues
+            // 
+            this.cmdAllValues.Location = new System.Drawing.Point(104, 85);
+            this.cmdAllValues.Name = "cmdAllValues";
+            this.cmdAllValues.Size = new System.Drawing.Size(75, 23);
+            this.cmdAllValues.TabIndex = 3;
+            this.cmdAllValues.Text = "All Values";
+            this.cmdAllValues.UseVisualStyleBackColor = true;
+            this.cmdAllValues.Click += new System.EventHandler(this.cmdAllValues_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(283, 293);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmdAllValues);
             this.Controls.Add(this.cmdUpdate);
             this.Controls.Add(this.cmdValue);
-            this.Controls.Add(this.cmdAllValues);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -78,10 +78,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button cmdAllValues;
         private System.Windows.Forms.Button cmdValue;
         private System.Windows.Forms.Button cmdUpdate;
+        private System.Windows.Forms.Button cmdAllValues;
     }
 }
 

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CCBC39DA-63BE-4BAD-8B7A-9DE0136D08C0}</ProjectGuid>
+    <ProjectGuid>{79DF8A5A-9A1C-486E-B8D0-96C032BDBD5E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormsWebApiClient</RootNamespace>
-    <AssemblyName>WindowsFormsWebApiClient</AssemblyName>
+    <RootNamespace>WindowsFormsClient</RootNamespace>
+    <AssemblyName>WindowsFormsClient</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -37,7 +37,6 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -63,11 +62,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="svcRestClient\ISvcRestClient.cs" />
-    <Compile Include="svcRestClient\IValues.cs" />
-    <Compile Include="svcRestClient\SvcRestClient.cs" />
-    <Compile Include="svcRestClient\Values.cs" />
-    <Compile Include="svcRestClient\ValuesExtensions.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,12 +89,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\libTools\libTools.csproj">
       <Project>{892306c4-e2cb-482a-8fff-e92a986e1aef}</Project>
       <Name>libTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SwaggerWebProxy\SwaggerWebProxy.csproj">
+      <Project>{5a0a1bdb-db25-4080-a451-bddb58be19a7}</Project>
+      <Name>SwaggerWebProxy</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -5,9 +5,11 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwaggerWebApp", "SwaggerWebApp\SwaggerWebApp.csproj", "{9E3D5022-72DD-422F-B35A-34ACCFCDF03B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsWebApiClient", "WindowsFormsWebApiClient\WindowsFormsWebApiClient.csproj", "{CCBC39DA-63BE-4BAD-8B7A-9DE0136D08C0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libTools", "libTools\libTools.csproj", "{892306C4-E2CB-482A-8FFF-E92A986E1AEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsClient", "WindowsFormsClient\WindowsFormsClient.csproj", "{79DF8A5A-9A1C-486E-B8D0-96C032BDBD5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwaggerWebProxy", "SwaggerWebProxy\SwaggerWebProxy.csproj", "{5A0A1BDB-DB25-4080-A451-BDDB58BE19A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +21,18 @@ Global
 		{9E3D5022-72DD-422F-B35A-34ACCFCDF03B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E3D5022-72DD-422F-B35A-34ACCFCDF03B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{9E3D5022-72DD-422F-B35A-34ACCFCDF03B}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{CCBC39DA-63BE-4BAD-8B7A-9DE0136D08C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CCBC39DA-63BE-4BAD-8B7A-9DE0136D08C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CCBC39DA-63BE-4BAD-8B7A-9DE0136D08C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CCBC39DA-63BE-4BAD-8B7A-9DE0136D08C0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{892306C4-E2CB-482A-8FFF-E92A986E1AEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{892306C4-E2CB-482A-8FFF-E92A986E1AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{892306C4-E2CB-482A-8FFF-E92A986E1AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{892306C4-E2CB-482A-8FFF-E92A986E1AEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79DF8A5A-9A1C-486E-B8D0-96C032BDBD5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79DF8A5A-9A1C-486E-B8D0-96C032BDBD5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79DF8A5A-9A1C-486E-B8D0-96C032BDBD5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79DF8A5A-9A1C-486E-B8D0-96C032BDBD5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A0A1BDB-DB25-4080-A451-BDDB58BE19A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A0A1BDB-DB25-4080-A451-BDDB58BE19A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A0A1BDB-DB25-4080-A451-BDDB58BE19A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A0A1BDB-DB25-4080-A451-BDDB58BE19A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
